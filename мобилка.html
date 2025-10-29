@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Записи дневника</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8e1e4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header .icon {
+      font-size: 48px;
+      color: #c47b8a;
+    }
+
+    .header h2 {
+      margin: 10px 0;
+      color: #c47b8a;
+      font-size: 22px;
+    }
+
+    .entries {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 90%;
+      max-width: 400px;
+      margin-bottom: 80px;
+    }
+
+    .entry-button {
+      background-color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 20px;
+      font-size: 16px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      color: #c47b8a;
+    }
+
+    .slider {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .slide {
+      display: inline-block;
+      width: 250px;
+      height: 150px;
+      margin-right: 10px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 10px;
+      color: #c47b8a;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      padding: 10px 0;
+      background-color: #f8e1e4;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    .nav-icon {
+      font-size: 24px;
+      color: #c47b8a;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .entries {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .entry-button {
+        flex: 1 1 30%;
+        text-align: center;
+      }
+
+      .slider {
+        white-space: normal;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .slide {
+        width: 200px;
+      }
+
+      .nav {
+        position: static;
+        background-color: transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="icon">📖❤️</div>
+    <h2>Записи дневника</h2>
+  </div>
+
+  <div class="entries">
+    <button class="entry-button">10.09</button>
+    <button class="entry-button">20.08</button>
+    <button class="entry-button">06.08</button>
+    <button class="entry-button">01.08</button>
+    <button class="entry-button">27.07</button>
+  </div>
+
+  <div class="slider">
+    <div class="slide">✨ Мотивация</div>
+    <div class="slide">🌧️ Настроение</div>
+    <div class="slide">📅 Планы</div>
+    <div class="slide">💭 Мысли</div>
+  </div>
+
+  <div class="nav">
+  <a href="index.html" class="nav-icon">🏠</a>
+  <div class="nav-icon">👤</div>
+  <div class="nav-icon">☰</div>
+  <div class="nav-icon">🔍</div>
+</div>
+
+</body>
+</html>
